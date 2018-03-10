@@ -28,20 +28,11 @@
 
         <!-- CSS FORM LOAD -->
         <!--===============================================================================================-->
-            <link rel="stylesheet" type="text/css" href="../asset/dashboard-libs/vendor/bootstrap/css/bootstrap.min.css">
-        <!--===============================================================================================-->
-            <link rel="stylesheet" type="text/css" href="../asset/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-        <!--===============================================================================================-->
-            <link rel="stylesheet" type="text/css" href="../asset/form-vendor/animate/animate.css">
-        <!--===============================================================================================-->	
-            <link rel="stylesheet" type="text/css" href="../asset/form-vendor/css-hamburgers/hamburgers.min.css">
-        <!--===============================================================================================-->
-            <link rel="stylesheet" type="text/css" href="../asset/form-vendor/select2/select2.min.css">
-        <!--===============================================================================================-->
-            <link rel="stylesheet" type="text/css" href="../asset/css/util-form.css">
+
         <!--===============================================================================================-->
             <link rel="stylesheet" type="text/css" href="../asset/css/main-form.css">
-            <link rel="stylesheet" type="text/css" href="../asset/css/login.css">
+
+            <link rel="stylesheet" type="text/css" href="../asset/css/bootstrap.min.css">
         <!--===============================================================================================-->
         <!-- END CSS FORM -->
           
@@ -132,27 +123,7 @@
 		</div>
 	</div>
 
-<!-- load js script form -->
-<!--===============================================================================================-->	
-	<script src="../asset/form-vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-	<script src="../asset/form-vendor/bootstrap/js/popper.js"></script>
-	<script src="../asset/form-vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-	<script src="../asset/form-vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-	<script src="../asset/form-vendor/tilt/tilt.jquery.min.js"></script>
-<!--===============================================================================================-->
-	<script >
-		$('.js-tilt').tilt({
-			scale: 1.1
-		})
-	</script>
-<!--===============================================================================================-->
-	<script src="../asset/dashboard-libs/js/main-form.js"></script>
-<!--===============================================================================================-->
-<!-- end js script form -->
-        
+
         
         
 </body>
