@@ -214,6 +214,23 @@ iframe {
   padding-bottom: 54px;
 }
 
+.login100-form-warning {
+  font-family: Poppins-Bold;
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.2;
+  text-align: center;
+  border-style: solid;
+  background-color: rgba(228,220,83,0.4);
+  border-color: #E4DC53;
+  width: 100%;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
 
 /*---------------------------------------------*/
 .wrap-input100 {

@@ -35,11 +35,12 @@
 	</head>
 
 	<body>
-        <div class="limiter">	
+        <div class="limiter">
+        	<a href="http://localhost/restorder/user/logout.php">logout</a>	
         	<div class="container-menu">
 			<div class="wrap-menu">
 			<form class="form-menu">
-				<a href="http://localhost/restorder/user/logout.php">logout</a>
+				
 				<br />
 				<br />
 
