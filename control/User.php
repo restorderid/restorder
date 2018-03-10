@@ -182,7 +182,15 @@ class User{
         $user = new User_model();
         return $user->pegawaiby($data,$email);
     }
-    
+	public function menu($business_name){
+	    $user = new User_model();
+		return $user->lihat_menu($business_name);
+	}
+    public function nama_usaha()
+	{
+	    $user = new User_model();
+		return $user->nama_usaha();
+	}
 }
 
 ?>

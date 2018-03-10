@@ -148,6 +148,20 @@ class User_model{
 		$row = $con->CountRow();
 		return $row;
 	}
+	public function lihat_menu($business_name){
+	    $con = new Connection();
+		$con->setQuery("Select * from `tb_menu` where business_name=?");
+		$con->bind(1, $business_name); //bind each value;
+		$row = $con->All();
+		return $row;
+	}
+	public function nama_usaha(){
+	    $con = new Connection();
+		$con->setQuery("Select distinct business_name from `tb_menu`");
+		$con->bind(1,""); //bind each value;
+		$row = $con->All();
+		return $row;
+	}
 	
 	//tidak digunakan
 	public function update($param1, $param2, $dst)
@@ -163,6 +177,7 @@ class User_model{
 		$query = mysql_query($sql);
 		return $query;
 	}
+	
 }
 
 ?>

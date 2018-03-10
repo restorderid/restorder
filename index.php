@@ -28,99 +28,65 @@
   		</div>
 	</ul>
 
-	<section id="home" class="home">
-        <div class="home_overlay">
-          	<div class="area">
-              	<h3>PROFESSIONAL APPLICATION SERVICE</h3>
-                <p>Modern  -  Fast  -  Reliable</p>
+	<?php
+        include "/control/User.php";
+        $user = new User();
+    ?>	
+<html>
+    <label>pilih resto</label>
+	<form method="post" action="">
+	    <select name="business_name">
+		    <option>pilih</option>
+		<?php $row = $user->nama_usaha();
+            foreach($row as $rows) 
+			{
+            $usaha = $rows['business_name'];
+		?>
+		    <option value="<?php echo $usaha; ?>"><?php echo $usaha; ?></option>
+		<?php } ?>
+		</select>
+		<input type="submit" value="cari">
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+            <span class="login100-form-title">
+						Daftar Menu
+					</span>
+                <div class="container-login100-form-btn">
+					<table border="1">
+                    <tr>
+                    <th>Nama</th>
+                    <th>Harga</th>
+                    <th>Jumlah</th>
+                    <th></th>
+                    </tr>
+					<?php
+					    if(!isset($_POST['business_name'])){
+                            $nama = "";
+						    $harga = "";
+						}else{
+						    $menu = $user->menu($_POST['business_name']);
+                            foreach($menu as $menus) 
+			                {
+                            $nama = $menus['menu_name'];
+                            $harga = $menus['price'];   
+					?>
+					<tr align="center">
+                        <td><input type="text" name="nama" value="<?php echo $nama; ?>"></td>
+                        <td><input type="text" name="harga" value="<?php echo $harga; ?>"</td>
+                        <td><input type="number" name="jumlah"></td>
+                        <td><input type="submit" value="tambah"></td>
+                    </tr>
+					<?php	}
+						}
+                    ?>
+                    </table>
+				</div>
+                </form>
             </div>
         </div>
-    </section>
-
-    <section id="about">
-        <div class="tentang text-center">
-        	<div class="biru">
-        		<h4>Application Service</h4>
-        		<p>Memberikan berbagai macam aplikasi yang anda butuhkan<p>
-        	</div>
-        	<div class="kuning">
-        		<h4>Gratis !</h4>
-        		<p>Semua Aplikasi dapat anda gunakan dengan Gratis<p>
-        	</div>
-        </div>
-    </section>
-
-    <div id="produk">
-    	<h1><center>Layanan</center></h1>
-		<hr>
-		<div class="responsive">
-			<div class="gallery">
-				<a target="_blank" href="asset/img/medium/clothing.jpg">
-					<img class="card-img-top" src="asset/img/medium/clothing.jpg" alt="" width="400">
-				</a>
-				<div class="desc">
-					<h4><a href="">CLOTHING</a></h4>
-					<p>Buat Program Clothing mu Disini !</p>
-				</div>
-			</div>
-		</div>
-		<div class="responsive">
-			<div class="gallery">
-				<a target="_blank" href="asset/img/medium/apotek.jpg">
-					<img src="asset/img/medium/apotek.jpg" alt="" width="400">
-				</a>
-				<div class="desc">
-					<h4><a href="">APOTEK</a></h4>
-					<p>Buat Program Apotek mu Disini !</p>
-				</div>
-			</div>
-		</div>
-		<div class="responsive">
-			<div class="gallery">
-				<a target="_blank" href="asset/img/medium/hotel.jpg">
-					<img class="card-img-top" src="asset/img/medium/hotel.jpg" alt="" width="400">
-				</a>
-				<div class="desc">
-					<h4><a href="">HOTEL</a></h4>
-					<p>Buat Program Hotel mu Disini !</p>
-				</div>
-			</div>
-		</div>
-		<div class="responsive">
-			<div class="gallery">
-				<a target="_blank" href="asset/img/medium/restaurant.jpg">
-					<img class="card-img-top" src="asset/img/medium/restaurant.jpg" alt="" width="400">
-				</a>
-				<div class="desc">
-					<h4><a href="">RESTAURANT</a></h4>
-					<p>Buat Program Restaurant mu Disini !</p>
-				</div>
-			</div>
-		</div>
-		<div class="responsive">
-			<div class="gallery">
-				<a target="_blank" href="asset/img/medium/mini-market.jpg">
-					<img src="asset/img/medium/mini-market.jpg" alt="" width="400">
-				</a>
-				<div class="desc">
-					<h4><a href="">MINI MARKET</a></h4>
-					<p>Buat Program Mini Market mu Disini !</p>
-				</div>
-			</div>
-		</div>
-		<div class="responsive">
-			<div class="gallery">
-				<a target="_blank" href="asset/img/medium/toko-elektronik.jpg">
-					<img class="card-img-top" src="asset/img/medium/toko-elektronik.jpg" alt="" width="400">
-				</a>
-				<div class="desc">
-					<h4><a href="">TOKO ELEKTRONIK</a></h4>
-					<p>Buat Program Toko Elektronik mu Disini !</p>
-				</div>
-			</div>
-		</div>
-		<div class="clearfix"></div>
-	</div>
+    </div>
+</html>
 
     <footer class="foot bg-footer">
         <p class="m-0 text-center">Copyright &copy; ANOTERO.ID</p>
