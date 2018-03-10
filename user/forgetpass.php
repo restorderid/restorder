@@ -36,27 +36,12 @@
 	</head>
 
 	<body>
-
-        <!--========== NAVBAR ==========-->
-        
-                
-                            <div class="navigasi">
-                                <ul class="navbar">
-                                    <li><a  href="../">Home</a>
-                                    <li><a  href="#">Produk</a>
-                                    <li><a  href="register.php">Daftar</a>
-                                    <li><a  href="login.php">Masuk</a>
-                                </ul>
-                            </div>
-              
-        <!--========== END NAVBAR ==========-->
-        
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
                 
-				<div class="login100-pic js-tilt" data-tilt>
-					<img src="../asset/img/medium/forgetpassword.png" alt="IMG">
+				<div class="login100-pic">
+					<img src="../asset/img/medium/forgetpassword.png" alt="IMG" width="30%;">
 				</div>
 
 				<form class="login100-form validate-form" method="POST" action="">
