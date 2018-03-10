@@ -168,28 +168,25 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: #38455C;
-  background: -webkit-#38455C;
-  background: -o-#38455C;
-  background: -moz-#38455C;
+  background-image: url("../img/large/bg-cafe.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 .wrap-login100 {
   width: 960px;
   /* meadowlark=E4DC53  */
-
+  text-align: center;
   background: #222;
   border-radius: 3px;
   overflow: hidden;
   opacity: 0.9;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 177px 130px 33px 95px;
+  padding: 90px 130px 33px 95px;
 }
 
 /*------------------------------------------------------------------
@@ -352,6 +349,7 @@ hr{
   background: #6FA2D3;
   color:#fff;
 }
+
 
 
 

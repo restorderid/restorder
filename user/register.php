@@ -15,15 +15,11 @@ include "../control/User.php";
         
         <!-- CSS FORM LOAD -->
         <!--===============================================================================================-->
-            <link rel="stylesheet" type="text/css" href="../asset/dashboard-libs/vendor/bootstrap/css/bootstrap.min.css">
+    
         <!--===============================================================================================-->
             <link rel="stylesheet" type="text/css" href="../asset/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
         <!--===============================================================================================-->
-            <link rel="stylesheet" type="text/css" href="../asset/form-vendor/animate/animate.css">
-        <!--===============================================================================================-->	
-            <link rel="stylesheet" type="text/css" href="../asset/form-vendor/css-hamburgers/hamburgers.min.css">
-        <!--===============================================================================================-->
-            <link rel="stylesheet" type="text/css" href="../asset/form-vendor/select2/select2.min.css">
+        	
         <!--===============================================================================================-->
             <link rel="stylesheet" type="text/css" href="../asset/css/util-form.css">
         <!--===============================================================================================-->
@@ -45,28 +41,14 @@ include "../control/User.php";
     </head>
 <body>
     
-    <!--========== NAVBAR ==========-->
-        
-                
-                            <div class="navigasi">
-                                <ul class="navbar">
-                                    <li><a  href="../">Home</a>
-                                    <li><a  href="#">Produk</a>
-                                    <li><a  href="register.php">Daftar</a>
-                                    <li><a  href="login.php">Masuk</a>
-                                </ul>
-                            </div>
-              
-        <!--========== END NAVBAR ==========-->
-    
-        <!--========== FORM ==========-->
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-                
-				<div class="login100-pic js-tilt" data-tilt>
-					<img src="../asset/img/medium/user-register.png" alt="IMG">
+                <center>
+				<div class="login100-pic">
+					<img src="../asset/img/medium/user-register.png" alt="IMG" width="30%;">
 				</div>
+				</center>
 
 				<form class="login100-form validate-form" method="POST" action="" onsubmit="return validasi_pass(this)">
 					<span class="login100-form-title">
@@ -167,26 +149,6 @@ include "../control/User.php";
 		</div>
 	</div>
 	
-<!-- load js script form -->
-<!--===============================================================================================-->	
-	<script src="../asset/form-vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-	<script src="../asset/form-vendor/bootstrap/js/popper.js"></script>
-	<script src="../asset/form-vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-	<script src="../asset/form-vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-	<script src="../asset/form-vendor/tilt/tilt.jquery.min.js"></script>
-<!--===============================================================================================-->
-	<script >
-		$('.js-tilt').tilt({
-			scale: 1.1
-		})
-	</script>
-<!--===============================================================================================-->
-	<script src="../asset/dashboard-libs/js/main-form.js"></script>
-<!--===============================================================================================-->
-<!-- end js script form -->
 </body>
 </html>
 

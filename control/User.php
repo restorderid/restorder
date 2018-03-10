@@ -151,7 +151,6 @@ class User{
 		    "cap2" => $cap2,
 		    "cap3" => $cap3,
 		);
-		echo $capca['cap3'];
 		return $capca;
 	}
     
