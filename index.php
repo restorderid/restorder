@@ -56,7 +56,7 @@
                   </select>
                 </div>
                 <div class="col-12 col-md-4 mb-10 mb-md-0" align="center">
-                  <button type="submit" class="btn btn-block btn-lg btn-primary">Lihat Menu</button>
+                  <button type="button" class="btn btn-block btn-lg btn-primary" data-toggle="modal" data-target="#exampleModal">Lihat Menu</button>
                 </div>
               </div>
               <button type="button" class="btn btn-block btn-lg btn-primary" data-toggle="modal" data-target="#exampleModal">
