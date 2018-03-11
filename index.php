@@ -82,9 +82,14 @@
           <div class="modal-body">
             <form class="form-menu">
               <div class="form-group">
+                <label for="inputAddress">Nama Pelanggan</label>
+                <input type="text" class="form-control" id="rounded-corner">
+              </div>
+              <div class="form-group">
                 <label for="inputAddress">Pilih Meja</label>
                 <input type="text" class="form-control" id="rounded-corner">
               </div>
+              <br />
               <br />
               <center>Menu Makanan</center>
               <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -158,7 +163,11 @@
               <br />
               <div class="form-group">
                   <label for="inputAddress2">Harga</label>
-                  <input type="number " class="form-control" id="rounded-corner" >
+                  <input type="number" class="form-control" id="rounded-corner" >
+              </div>
+              <div class="form-group">
+                  <label for="inputAddress2">Jumlah</label>
+                  <input type="number" class="form-control" id="rounded-corner" >
               </div>
               <button type="submit" class="btn btn-primary" id="rounded-corner">Pesan</button>
             </form>
