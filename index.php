@@ -12,6 +12,8 @@
     <title>ANOTERO - PLATFORM</title>
 
     <link href="asset/css/bootstrap.css" rel="stylesheet">
+    <link href="asset/css/input-menu.css" rel="stylesheet" type="text/css">
+    <link href="asset/css/rounded-image.css" rel="stylesheet">
     <link href="asset/css/landing-page.css" rel="stylesheet">
     <link href="asset/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="asset/css/simple-line-icons.css" rel="stylesheet" type="text/css">
@@ -34,14 +36,13 @@
     <header class="masthead text-white text-center">
       <div class="overlay"></div>
       <div class="container">
-        
         <div class="row">
-          
+
           <div class="col-xl-5 mx-auto" style="opacity: 0.8;cursor: default;">
             <h1 class="mb-5">Pesan Menu Sekarang Gak Perlu Teriak-teriak gansis!<br/><small><a href="#" class="btn btn-secondary active"><i class="fa fa-registered"></i> E S T O D E R . I D</a></small></h1>
           </div>
 
-          <div class="col-xl-5 mx-auto">
+          <div class="col-xl-5 mx-auto" style="margin-top: 10%;">
             <form method="post" action="">
               <div class="form-row">
                 <div class="col-12 col-md-8 mb-10 mb-md-0">
@@ -59,72 +60,120 @@
                   <button type="button" class="btn btn-block btn-lg btn-primary" data-toggle="modal" data-target="#exampleModal">Lihat Menu</button>
                 </div>
               </div>
-              <button type="button" class="btn btn-block btn-lg btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button>
             </form>
           </div>
 
-         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-         <span class="login100-form-title">
-            Daftar Menu
-          </span>
-                <div class="container-login100-form-btn">
-          <table border="1">
-                    <tr>
-                    <th>Nama</th>
-                    <th>Harga</th>
-                    <th>Jumlah</th>
-                    <th></th>
-                    </tr>
-          <?php
-              if(!isset($_POST['business_name'])){
-                            $nama = "";
-                $harga = "";
-            }else{
-                $menu = $user->menu($_POST['business_name']);
-                            foreach($menu as $menus) 
-                      {
-                            $nama = $menus['menu_name'];
-                            $harga = $menus['price'];   
-          ?>
-          <tr align="center">
-                        <td><input type="text" name="nama" value="<?php echo $nama; ?>"></td>
-                        <td><input type="text" name="harga" value="<?php echo $harga; ?>"</td>
-                        <td><input type="number" name="jumlah"></td>
-                        <td><input type="submit" value="tambah"></td>
-                    </tr>
-          <?php }
-            }
-                    ?>
-                    </table>
         </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> 
+    </header>
+
+     <!-- Modal -->
+    <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Pilih Menu</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="form-menu">
+              <div class="form-group">
+                <label for="inputAddress">Pilih Meja</label>
+                <input type="text" class="form-control" id="rounded-corner">
+              </div>
+              <br />
+              <center>Menu Makanan</center>
+              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="3 "></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="asset/img/large/bg-cafe.jpg" alt="First slide">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>DOMBA GARUT</h5>
+                      <p>DUA</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="asset/img/large/bg-cafe.png" alt="IMG">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>SATU</h5>
+                      <p>DUA</p>
+                    </div>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+              <br />
+              <br />
+              <center>Menu Minuman</center>
+              <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="3 "></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="asset/img/large/bg-cafe.jpg" alt="First slide">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>DOMBA GARUT</h5>
+                      <p>DUA</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="asset/img/large/bg-cafe.png" alt="IMG">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>SATU</h5>
+                      <p>DUA</p>
+                    </div>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators2" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+              <br />
+              <br />
+              <div class="form-group">
+                  <label for="inputAddress2">Harga</label>
+                  <input type="number " class="form-control" id="rounded-corner" >
+              </div>
+              <button type="submit" class="btn btn-primary" id="rounded-corner">Pesan</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
       </div>
     </div>
-  </div>
-</div>
-         
 
-        </div>
+    <div id="map"></div>
 
-      </div>
-    </header>
-          <div id="map"></div>
-
-        <!-- Footer -->
+    <!-- Footer -->
     <footer class="footer bg-light">
       <div class="container">
         <div class="row">
